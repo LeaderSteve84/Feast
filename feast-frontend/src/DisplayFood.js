@@ -9,10 +9,13 @@ const DisplayFood = () => {
             <div className="foodImages">
                 <img src= { foodImage } alt="Sample foods and recipes" />
             </div>
-            <p>
+            <p className="name-recipes-comment">
                 <span className="name">Name: { foodName } </span><br />
-                <span className="recipes">Recipes: { recipes } </span>
+                <span className="recipes">Recipes: { recipes } </span><br />
                 <span className="homeComment">Comment:</span> <input type="text" className="input" />
+            </p>
+            <p className="more">
+                More Contents? Click <a href="/foods" className="foodsLink">Foods</a> for great experiences with varieties of foods and their recipes.
             </p>
         </div>
      );
