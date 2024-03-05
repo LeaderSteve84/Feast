@@ -12,6 +12,7 @@ const DisplayFood = () => {
             <p>
                 <span className="name">Name: { foodName } </span><br />
                 <span className="recipes">Recipes: { recipes } </span>
+                <span className="homeComment">Comment:</span> <input type="text" className="input" />
             </p>
         </div>
      );
