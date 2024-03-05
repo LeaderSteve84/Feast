@@ -2,7 +2,7 @@ const About = () => {
     return ( 
         <div className="about">
             <p className="about-head">
-                <span className="about-topic">About Feast?</span> A social web application platfrom for food lovers. For detail knowledge<span className="clickhere">Click Here.</span>
+                <span className="about-feast">About Feast?</span> A social web application platform for food lovers. For more knowledge about Feast <span className="clickHere">Click Here.</span>
             </p>
         </div>
      );
