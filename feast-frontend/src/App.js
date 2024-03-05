@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './Navbar';
 import About from './About';
+import Header from './Header';
 
 function App() {
   return (
