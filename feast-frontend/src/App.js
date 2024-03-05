@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import About from './About';
 import Header from './Header';
 import Wwedo from './Wwedo';
+import DisplayFood from './DisplayFood';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
       </div>
       <div className="moreContent">
         <Wwedo />
+      </div>
+      <div className="displayFoodContent">
+        <DisplayFood />
       </div>
     </div>
   );
