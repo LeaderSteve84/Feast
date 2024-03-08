@@ -2,12 +2,14 @@ import './App.css';
 import Navbar from './Navbar';
 import Header from './Header';
 import Footer from './Footer';
+import Foods from './Foods';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <Header />
         <Navbar />
         <div className="Content">
           <Switch>
@@ -28,7 +30,7 @@ function App() {
             </Route>
           </Switch>
         </div>
-        <footer />
+        <Footer />
       </div>
     </Router>
   );

@@ -1,9 +1,15 @@
+import { Link } from 'react';
+
 const Footer = () => {
-    return ( 
-        <nav className="footer">
-            <a href="/home" className="footer-home">Home</a>
-            <a href="/foods" className="footer-foods">Foods</a> <span className="mantra">For the love of food . . .</span>
-        </nav>
+    return (
+        <div className="footer"> 
+            <nav>
+                <link to="/home" className="footer-home">Home</link>
+                <link to="/foods" className="footer-foods">Foods</link> 
+                <link to="/about" className="footer-about">About</link> 
+            </nav>
+            <em className="mantra">For the love of food . . .</em>
+        </div>
      );
 }
  
