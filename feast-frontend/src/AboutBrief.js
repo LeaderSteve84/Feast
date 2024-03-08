@@ -1,3 +1,5 @@
+import { Link } from 'react';
+
 const AboutBrief = () => {
     return ( 
         <div className="about-brief">

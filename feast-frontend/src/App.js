@@ -1,9 +1,7 @@
 import './App.css';
 import Navbar from './Navbar';
-
 import Header from './Header';
-import Wwedo from './Wwedo';
-import DisplayFood from './DisplayFood';
+
 import Footer from './Footer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 

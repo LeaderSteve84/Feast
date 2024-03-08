@@ -14,9 +14,6 @@ const DisplayFood = () => {
                 <span className="recipes">Recipes: { recipes } </span><br />
                 <span className="homeComment">Comment:</span> <input type="text" className="input" />
             </p>
-            <p className="more">
-                More Contents? Click <a href="/foods" className="foodsLink">Foods</a> for great experiences with varieties of foods and their recipes.
-            </p>
         </div>
      );
 }
