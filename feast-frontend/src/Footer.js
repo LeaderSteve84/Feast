@@ -1,12 +1,12 @@
-import { Link } from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <div className="footer"> 
             <nav>
-                <link to="/home" className="footer-home">Home</link>
-                <link to="/foods" className="footer-foods">Foods</link> 
-                <link to="/about" className="footer-about">About</link> 
+                <Link to="/home" className="footer-home">Home</Link>
+                <Link to="/foods" className="footer-foods">Foods</Link> 
+                <Link to="/about" className="footer-about">About</Link> 
             </nav>
             <em className="mantra">For the love of food . . .</em>
         </div>
