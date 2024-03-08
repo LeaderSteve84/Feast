@@ -4,7 +4,7 @@ const MoreContents = () => {
     return ( 
         <div className="morecontents">
             <p className="more">
-                More Contents? Click <Link to="/foods" className="foodslink">Foods</Link> for great experiences with varieties of foods and their recipes.
+                <span>More Contents?</span> Click <Link to="/foods" className="foodslink">Foods</Link> for great experiences with varieties of foods and their recipes.
             </p>
         </div>
      );

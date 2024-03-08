@@ -5,7 +5,7 @@ const Foods = () => {
 
     return ( 
         <div className="foods">
-            {/* Data */ } On this Foods Page Foods images, names and recipes will be display
+            <p>This Foods Page will display Foods images, names and recipes will be display</p>
         </div>
      );
 }
