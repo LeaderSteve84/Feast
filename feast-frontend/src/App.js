@@ -4,6 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Foods from './Foods';
 import About from './About';
+import SignUp from './SignUp';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
