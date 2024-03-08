@@ -5,29 +5,34 @@ import Header from './Header';
 import Wwedo from './Wwedo';
 import DisplayFood from './DisplayFood';
 import Footer from './Footer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <div className="headerContent">
-        <Header />
-      </div>
-      <div className="navContent">
+    <Router>
+      <div className="App">
         <Navbar />
+        <div className="Content">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/foods">
+              <Foods />
+            </Route>
+            <Route exact path="/signup">
+              <SignUp />
+            </Route>
+            <Route exact path="/signin">
+              <SignIn />
+            </Route>
+          </Switch>
+        </div>
       </div>
-      <div className="aboutContent">
-        <About />
-      </div>
-      <div className="moreContent">
-        <Wwedo />
-      </div>
-      <div className="displayFoodContent">
-        <DisplayFood />
-      </div>
-      <div className="footerContent">
-        <Footer />
-      </div>
-    </div>
+    </Router>
   );
 }
 
