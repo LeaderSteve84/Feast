@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Header from './Header';
 import Footer from './Footer';
 import Foods from './Foods';
+import About from './About';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
