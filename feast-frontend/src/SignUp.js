@@ -1,6 +1,6 @@
 const SignUp = () => {
     return ( 
-        <h1>This sign up page is under development</h1>
+        <h1>This sign up page is under development. Please check back some other time. Thanks</h1>
      );
 }
  
