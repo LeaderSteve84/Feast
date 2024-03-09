@@ -1,3 +1,5 @@
+import food_a from './foodimages/food_a.jpg'
+
 const DisplayFood = () => {
 
     let foodName = "Maize Poddy";
@@ -7,7 +9,7 @@ const DisplayFood = () => {
         <div className="displayfoods">
             <p className="pointer">See <img src="" alt="see below" className="image-pointer"/> sample of foods and their recipes.</p>
             <div className="foodImages">
-                <link rel="apple-touch-icon" href="%PUBLIC_URL%/food_a.jpg" alt="Sample foods and recipes" />
+                <img src={ food_a } alt="sample food" height={400} width={400} />
             </div>
             <p className="name-recipes-comment">
                 <span className="name">Name: { foodName } </span><br />
