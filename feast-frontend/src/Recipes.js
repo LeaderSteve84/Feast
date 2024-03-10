@@ -1,13 +1,13 @@
 // import { useState } from 'react';
 
-const Foods = () => {
+const Recipes = () => {
     // const [Data, setData] = useState("Hello");
 
     return ( 
         <div className="foods">
-            <p>This Foods Page will display Foods images, names and recipes will be display</p>
+            <p>This Recipes Page will display recipes of different kinds of dish</p>
         </div>
      );
 }
  
-export default Foods;
+export default Recipes;
