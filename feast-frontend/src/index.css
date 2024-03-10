@@ -17,7 +17,7 @@ body {
   border-bottom: 3px solid Red;
 }
 
-.footer {
+.footer-nav-bar {
   background-color: slategrey;
   display: flex;
   align-items: center;
@@ -26,9 +26,17 @@ body {
   border-top: 3px solid Red;
 }
 
+.footer-mantra {
+  font-style: italic;
+  font-size: 15px;
+  text-align: right;
+  color: Red;
+  margin-left: 800px;
+}
+
 .nav-header {
   color: red;
-  font-size: 40px;
+  font-size: 25px;
   text-align: left;
   margin-left: 20px;
   margin-right: none;
