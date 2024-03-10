@@ -44,11 +44,11 @@ const DisplayFood = () => {
         <div className="displayfoods">
             <p className="pointer">See <img src={ require('./foodimages/finger-pointer.jpg') } alt="see below" height={40} width={10} className="image-pointer"/> sample of dish images of some recipes.</p>
             <div className="foodImages">
-                { ImageList[0] }
-                <button onClick={ handledClick }>Random Display</button>
+                { ImageList[0] }<br />
+                <span className="name">Name: { ImageList[1] } </span>
+                <br /><button onClick={ handledClick }>Random Display</button>
             </div>
             <p className="name-recipes-comment">
-                <span className="name">Name: { ImageList[1] } </span><br />
                 <span className="homeComment">Comment:</span> <input type="text" className="input" />
             </p>
         </div>
