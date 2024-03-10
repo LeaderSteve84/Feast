@@ -26,16 +26,18 @@ const DisplayFood = () => {
 
     ];
 
-    var index = 0;
-    const [ImageList, setImageList] = useState({ foodImageData[index] });
+    const[I, setI] = useState(0);
+    
+    const [ImageList, setImageList] = useState(() => {
+        return ({ foodImageData[i] });
 
     const handledClick = () => {
-        if (index < foodImageData.lenght() - 1) {
-            index = index + 1;
-            setImageList(foodImageData[index]);
+        if (i < (foodImageData.length - 1)) {
+            i = i + 1;
+            setImageList(foodImageData[i]);
         } else {
-            index = 0;
-            setImageList(foodImageData[index]);
+            i = 0;
+            setImageList(foodImageData[i]);
         }
     }
 
