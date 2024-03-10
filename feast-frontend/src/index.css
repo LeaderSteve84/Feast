@@ -20,3 +20,17 @@ code {
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
+
+.nav-bar h1 {
+  color: #f1356d;
+}
+
+.nav-bar .links {
+  margin-left: auto;
+}
+
+.nav-bar Link {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
