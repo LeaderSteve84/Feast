@@ -7,30 +7,61 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .nav-bar {
-  padding: 20px;
+  background-color: slategrey;
+  padding: none;
   display: flex;
   align-items: center;
-  max-width: 600px;
+  max-width: 100%;
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 3px solid Red;
 }
 
-.nav-bar h1 {
-  color: #f1356d;
+.footer {
+  background-color: slategrey;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  border-top: 3px solid Red;
 }
 
-.nav-bar .links {
-  margin-left: auto;
+.nav-header {
+  color: red;
+  font-size: 40px;
+  text-align: left;
+  margin-left: 20px;
+  margin-right: none;
+  padding: none;
 }
 
-.nav-bar Link {
-  margin-left: 16px;
+.home-link, .about-link, .footer-recipes-link {
+  text-align: left;
+  margin-left: 20px;
+  text-decoration: underline;
+  padding: none;
+  font-size: 20px;
+  color: blue;
+  font-style: bold;
+}
+
+.recipes-link {
+  text-align: end;
+  margin-left: 750px;
+  text-decoration: underline;
+  padding: none;
+  font-size: 20px;
+  color: blue;
+  font-style: bold;
+} 
+
+.signIn-link, .signUp-link {
+  text-align: end;
+  margin-left: 20px;
   text-decoration: none;
-  padding: 6px;
+  padding: 3px;
+  border: 1px red solid;
+  font-size: 20px;
+  color: Blue;
+  font-style: bold;
 }

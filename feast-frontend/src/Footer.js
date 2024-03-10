@@ -4,11 +4,13 @@ const Footer = () => {
     return (
         <div className="footer"> 
             <nav>
-                <Link to="/" className="footer-home">Home</Link>
-                <Link to="/recipes" className="footer-foods">Recipes</Link> 
-                <Link to="/about" className="footer-about">About</Link> 
+                <div className="footer-link">
+                    <Link to="/" className="home-link">Home</Link>
+                    <Link to="/about" className="about-link">About</Link> 
+                    <Link to="/recipes" className="footer-recipes-link">Recipes</Link> 
+                </div>
+                <h1 className="footer-mantra">For the love of food . . .</h1>  
             </nav>
-            <em className="mantra">For the love of food . . .</em>
         </div>
      );
 }
