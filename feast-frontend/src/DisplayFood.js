@@ -1,4 +1,4 @@
-// import {} from 'react;
+import { useState } from 'react';
 
 const DisplayFood = () => {
 
@@ -26,29 +26,28 @@ const DisplayFood = () => {
 
     ];
 
-    // function to shuffle array (Fisher-yates algorithm)
-    const shuffleArray = (array) => {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
+    var index = 0;
+    const [ImageList, setImageList] = useState({ foodImageData[index] });
+
+    const handledClick = () => {
+        if (index < foodImageData.lenght() - 1) {
+            index = index + 1;
+            setImageList(foodImageData[index]);
+        } else {
+            index = 0;
+            setImageList(foodImageData[index]);
         }
-        return array;
-    };
-    
-    // Shuffle the array of food photos
-    const shuffledFoodPhotos = shuffleArray(foodImageData);
+    }
 
     return ( 
         <div className="displayfoods">
             <p className="pointer">See <img src={ require('./foodimages/finger-pointer.jpg') } alt="see below" height={40} width={10} className="image-pointer"/> sample of dish images of some recipes.</p>
             <div className="foodImages">
-                {shuffledFoodPhotos.slice(0, 10).map((photo, index) => (
-                    <img key={index} src={photo[0]} alt={'Food ${index + 1}'} />
-                ))}
-                {/* foodImageData[0][0] */}
+                { ImageList[0] }
+                <button onClick={ handledClick }>Random Display</button>
             </div>
             <p className="name-recipes-comment">
-                <span className="name">Name: { foodImageData[0][1] } </span><br />
+                <span className="name">Name: { ImageList[1] } </span><br />
                 <span className="homeComment">Comment:</span> <input type="text" className="input" />
             </p>
         </div>
