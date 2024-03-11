@@ -42,7 +42,7 @@ const DisplayFood = () => {
 
     return ( 
         <div className="displayfoods">
-            <p className="pointer">See <img src={ require('./foodimages/finger-pointer.jpg') } alt="see below" height={40} width={10} className="image-pointer"/> sample of dish images of some recipes. Click Random Display button below.</p>
+            <p className="pointer">See <img src={ require('./foodimages/finger-pointer.jpg') } alt="see below" height={40} width={10} className="image-pointer"/> sample of dish images of some recipes. Click <span className="rd">Random Display</span> button below.</p>
             <div className="foodImages">
                 { ImageList[0] }<br />
                 <span className="name">Name: { ImageList[1] } </span>

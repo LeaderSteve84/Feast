@@ -79,13 +79,13 @@ body {
 
 }
 .foodImages {
-  border: 15px solid red;
+  border: 15px solid #d32f2f;
   display:inline-block;
 }
 
 .feast {
   text-align: center;
-  color: #466b13d3;
+  color: #d32f2f;
   text-shadow: 2px 2px;
   margin-bottom: 0%;
 }
@@ -94,34 +94,38 @@ body {
   text-align: center;
   font-style: italic;
   font-size: 15px;
-  color: red;
+  color: black;
   margin-top: 0%;
 }
 
 .about-feast {
   font-size: 25px;
-  color:#466b13d3;
+  color:#4caf50;
   font-weight: bolder;
 }
 
 .food-lovers {
   font-style: italic;
-  color: Red;
+  color: #d32f2f;
   font-weight: bold;
 }
 
 .click-here {
   font-weight: bold;
-  color: orangered;
+  color:#d32f2f;
 }
 
 .more-contents {
   font-size: 20px;
-  color:#466b13d3;
+  color: #d32f2f;
   font-weight: bold;
 }
 
 .recipeslink {
   font-weight: bold;
-  color: Red;
+  color: #d32f2f;
+}
+
+.rd {
+  font-
 }
