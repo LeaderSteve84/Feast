@@ -46,7 +46,7 @@ const DisplayFood = () => {
             <div className="foodImages">
                 { ImageList[0] }<br />
                 <span className="name">Name: { ImageList[1] } </span>
-                <br /><button onClick={ handledClick }>Random Display</button>
+                <br /><button onClick={ handledClick } className="random-display">Random Display</button>
             </div>
             <p className="name-recipes-comment">
                 <span className="homeComment">Comment:</span> <input type="text" className="input" />
