@@ -8,34 +8,32 @@ body {
 }
 
 .nav-bar {
-  background-color: slategrey;
+  background-color: #808080;
   padding: none;
   display: flex;
   align-items: center;
   max-width: 100%;
   margin: 0 auto;
-  border-bottom: 3px solid Red;
 }
 
 .footer-nav-bar {
-  background-color: slategrey;
+  background-color: #808080;
   display: flex;
   align-items: center;
   max-width: 100%;
   margin: 0 auto;
-  border-top: 3px solid Red;
 }
 
 .footer-mantra {
   font-style: italic;
   font-size: 15px;
   text-align: right;
-  color: Red;
+  color: #ffffff;
   margin-left: 800px;
 }
 
 .nav-header {
-  color: red;
+  color: whitesmoke;
   font-size: 25px;
   text-align: left;
   margin-left: 20px;
@@ -47,10 +45,11 @@ body {
   text-align: left;
   margin-left: 20px;
   text-decoration: underline;
-  padding: none;
+  padding: 4px;
   font-size: 20px;
-  color: blue;
+  color: #d32f2f;
   font-style: bold;
+  border: 2px solid #4caf50;
 }
 
 .recipes-link {
@@ -59,18 +58,19 @@ body {
   text-decoration: underline;
   padding: none;
   font-size: 20px;
-  color: blue;
+  color: #d32f2f;
   font-style: bold;
+  border: 2x solid #4caf50
 } 
 
 .signIn-link, .signUp-link {
   text-align: end;
   margin-left: 20px;
   text-decoration: none;
-  padding: 3px;
-  border: 1px red solid;
+  padding: 4px;
+  border: 2px solid #4caf50;
   font-size: 20px;
-  color: Blue;
+  color: #d32f2f;
   font-style: bold;
 }
 
@@ -79,7 +79,7 @@ body {
 
 }
 .foodImages {
-  border: 15px solid #d32f2f;
+  border: 15px solid #4caf50;
   display:inline-block;
 }
 
@@ -94,25 +94,25 @@ body {
   text-align: center;
   font-style: italic;
   font-size: 15px;
-  color: black;
+  color: white;
   margin-top: 0%;
 }
 
 .about-feast {
   font-size: 25px;
-  color:#4caf50;
+  color:#d32f2f;
   font-weight: bolder;
 }
 
 .food-lovers {
   font-style: italic;
-  color: #d32f2f;
+  color: #795548;
   font-weight: bold;
 }
 
 .click-here {
   font-weight: bold;
-  color:#d32f2f;
+  color:#795548;
 }
 
 .more-contents {
@@ -123,9 +123,10 @@ body {
 
 .recipeslink {
   font-weight: bold;
-  color: #d32f2f;
+  color: #795548;
 }
 
 .rd {
-  font-
+  color: #795548;
+  border: 2px solid #4caf50;
 }
