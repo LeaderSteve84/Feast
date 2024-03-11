@@ -12,7 +12,7 @@ const DisplayFood = () => {
         [<img src={ require('./foodimages/jollof-chicken.jpeg') } alt="recipe sample pix" height={400} width={400} />, 
         "Jollof Rice with Chicken"],
         [<img src={ require('./foodimages/jollof.jpeg') } alt="recipe sample pix" height={400} width={400} />, 
-        "Jollof"],
+        "Jollof Rice"],
         [<img src={ require('./foodimages/makhani.jpg') } alt="recipe sample pix" height={400} width={400} />, 
         "Vegan Dal Makhani"],
         [<img src={ require('./foodimages/paratha.jpg') } alt="recipe sample pix" height={400} width={400} />, 
@@ -42,7 +42,7 @@ const DisplayFood = () => {
 
     return ( 
         <div className="displayfoods">
-            <p className="pointer">See <img src={ require('./foodimages/finger-pointer.jpg') } alt="see below" height={40} width={10} className="image-pointer"/> sample of dish images of some recipes.</p>
+            <p className="pointer">See <img src={ require('./foodimages/finger-pointer.jpg') } alt="see below" height={40} width={10} className="image-pointer"/> sample of dish images of some recipes. Click Random Display button below.</p>
             <div className="foodImages">
                 { ImageList[0] }<br />
                 <span className="name">Name: { ImageList[1] } </span>
