@@ -4,7 +4,19 @@
   display: flex;
   align-items: center;
   max-width: 100%;
+  margin: 76px 0 0;
+
+}
+
+.feast-header {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: #e0e0e0;
   margin: 0 auto;
+  padding: 1px;
 }
 
 .footer-nav-bar {
@@ -36,24 +48,25 @@
   text-align: left;
   margin-left: 20px;
   text-decoration: none;
-  padding: 4px;
+  padding: 1px 6px;
   font-size: 20px;
   color: #d32f2f;
   font-style: bold;
   border: 2px solid #ffffff;
+  border-radius: 100px;
   background-color: #ffffff;
 }
 
 .recipes-link {
   text-align: end;
-  margin-left: 750px;
+  margin-left: 720px;
   text-decoration: none;
-  padding: 4px;
+  padding: 1px 6px;
   font-size: 20px;
   color: #d32f2f;
   font-style: bold;
   border: 2x solid #d32f2f;
-  border-radius: 30px;
+  border-radius: 100px;
   background-color:white;
 } 
 
@@ -61,13 +74,13 @@
   text-align: end;
   margin-left: 20px;
   text-decoration: none;
-  padding: 4px;
-  border: 2px solid #ffffff;
-  border-radius: 30px;
+  padding: 1px 6px;
+  border: 2px solid #d32f2f;
+  border-radius: 100px;
   font-size: 20px;
-  color: #d32f2f;
+  color: #ffffff;
   font-style: bold;
-  background-color: white;
+  background-color: #d32f2f;
 }
 
 .home {
@@ -84,7 +97,9 @@
   color: #d32f2f;
   text-shadow: 2px 2px;
   margin-bottom: 0%;
-  margin-top: 3px;
+  margin-top: 2px;
+  padding-top: 4px;
+  padding-bottom: none;
 }
 
 .mantra {
@@ -93,6 +108,8 @@
   font-size: 15px;
   color: #000000;
   margin-top: 0%;
+  padding-bottom: none;
+  margin-bottom: none;
 }
 
 .about-feast {
@@ -111,6 +128,11 @@
 .click-here {
   font-weight: bold;
   color:#795548;
+  text-decoration: none;
+  background-color: #ffffff;
+  padding: 3px 8px;
+  border: 2px solid #4caf50;
+  border-radius: 100px;
 }
 
 .more-contents {
@@ -122,6 +144,10 @@
 .recipeslink {
   font-weight: bold;
   color: #795548;
+  text-decoration: none;
+  border: 2px solid #4caf50;
+  border-radius: 100px;
+  padding: 3px 8px;
 }
 
 .rd {
@@ -130,7 +156,9 @@
 
 .random-display {
   border: 2px solid #d32f2f;
+  border-radius: 50px;
   color:#795548;
+  margin: 10px auto;
 }
 
 .about {
