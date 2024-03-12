@@ -82,6 +82,7 @@
   color: #d32f2f;
   text-shadow: 2px 2px;
   margin-bottom: 0%;
+  margin-top: 3px;
 }
 
 .mantra {
@@ -128,4 +129,25 @@
 .random-display {
   border: 2px solid #d32f2f;
   color:#795548;
+}
+
+about {
+ max-width: 100%;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.paragraph-heading {
+  font-size: 18px;
+  margin-bottom: none;
+  display: inline;
+  color: #d32f2f;
+  text-align: left;
+}
+
+.paragraph {
+  /* border: 1px solid #795548; */
+  margin-top: none;
+  text-align: left;
+  background-color: #ffffff;
 }
