@@ -131,8 +131,9 @@
   color:#795548;
 }
 
-about {
- max-width: 100%;
+.about {
+  background-color: #ffffff;
+  max-width: 100%;
   width: 600px;
   margin: 0 auto;
 }
