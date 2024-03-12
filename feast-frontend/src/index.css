@@ -147,8 +147,10 @@
 }
 
 .paragraph {
-  /* border: 1px solid #795548; */
   margin-top: none;
+  /* padding-top: none; */
   text-align: left;
-  background-color: #ffffff;
+  letter-spacing: 3px;
+  line-height: 30px;
+  /* background-color: #ffffff; */
 }
