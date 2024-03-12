@@ -4,19 +4,8 @@
   display: flex;
   align-items: center;
   max-width: 100%;
-  margin: 68px 0 0;
+  margin: 66px 0 0;
 
-}
-
-.feast-header {
-  position: fixed; 
-  text-align: center;
-  top: 0;
-  width: 100%;
-  left: 0;
-  background-color: #e0e0e0;
-  margin: 0 auto;
-  padding: 1px;
 }
 
 .footer-nav-bar {
@@ -91,23 +80,34 @@
   display:inline-block;
 }
 
-.feast {
+.feast-header {
+  position: fixed;
   text-align: center;
+  top: 0;
+  max-width: 100%;
+  width: 100%;
+  left: 0;
+  background-color: #e0e0e0;
+  margin: 0 auto;
+  padding: 1px;
+}
+
+.feast {
   color: #d32f2f;
   text-shadow: 2px 2px;
   margin-bottom: 0%;
   margin-top: 2px;
   padding-top: 4px;
   padding-bottom: 0;
+  margin: 0;
 }
 
 .mantra {
-  text-align: center;
   font-style: italic;
   font-size: 15px;
   color: #000000;
   margin-top: 0%;
-  padding-bottom: 6px;
+  padding: 0 6px 6px 6px;
   margin-bottom: 0;
 }
 
