@@ -1,12 +1,12 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 
 const SignIn = () => {
 
-    const [username, setUsername] = useState('');
+    // const [username , setUsername] = useState('');
 
     return ( 
         <div className="signin">
-            ''
+            <p className="">Sign-In Page</p>
         </div>
      );
 }
