@@ -1,6 +1,13 @@
+import { useState } from 'react';
+
 const SignIn = () => {
+
+    const [username, setUsername] = useState('');
+
     return ( 
-        <h1>This Sign In page is under development. Please check back some other time. Thanks.</h1>
+        <div className="signin">
+            
+        </div>
      );
 }
  
