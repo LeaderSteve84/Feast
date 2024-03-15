@@ -1,0 +1,84 @@
+div.container {
+    width: 400px;
+    height: 600px;
+    margin: 20px auto;
+    padding: 25px 35px;
+    background-color: #ffffff;
+}
+
+div.header {
+    text-align: center;
+    font-size: 40px;
+    color: red;
+    margin: 15px auto;
+    padding: 0%;
+}
+
+div.inputs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    background-color: gray;
+}
+
+div.input {
+    font-size: 15px;
+    outline: 0;
+    border: 0;
+    margin: 0 auto;
+    padding: 0%;
+}
+
+div.forget-password span {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+div.forget-password span:hover {
+    color: red;
+}
+
+div.signup-signin-buttons {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin: 25px auto;
+    padding: 0;
+    
+}
+
+.signup-button, .signin-button {
+    width: 9px;
+    height: 5px;
+    border-radius: 36px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.grey {
+    background-color: grey;
+    border: #ffffff;
+}
+
+div.submit-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin: 25px auto;
+    padding: 0;
+}
+
+div.summit-to-signup, div.submit-to-login {
+    color: #ffffff;
+    width: 15px;
+    height: 5px;
+    background-color: grey;
+    margin: 25px auto;
+    padding: 3px auto;
+    border-radius: 36px;
+    border: red;
+    cursor: pointer;
+}

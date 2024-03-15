@@ -7,6 +7,7 @@ import Recipes from './Recipes';
 import About from './About';
 import SignUp from './SignUp';
 import SignIn from './SignIn';
+import SignupLogin from './SignupLogin';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -22,9 +23,10 @@ function App() {
             <Route path="/recipes" element={<Recipes />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signin" element={<SignIn />} />
+            <Route path="/signuplogin" element={<SignupLogin />} />
           </Routes>
         </div>
-        <Footer />
+          <Footer />
       </div>
     </Router>
   );
