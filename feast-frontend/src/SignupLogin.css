@@ -8,7 +8,7 @@ div.container {
 
 div.header {
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     color: red;
     margin: 15px auto;
     padding: 0%;
@@ -20,6 +20,7 @@ div.inputs-container {
     align-items: center;
     gap: 25px;
     background-color: gray;
+    padding: 25px 25px;
 }
 
 div.input {
@@ -30,6 +31,9 @@ div.input {
     padding: 0%;
 }
 
+div.forget-password {
+    margin-top: 25px;
+}
 div.forget-password span {
     font-weight: 600;
     cursor: pointer;
@@ -43,21 +47,25 @@ div.signup-signin-buttons {
     display: flex;
     gap: 30px;
     align-items: center;
+    justify-content: center;
     margin: 25px auto;
-    padding: 0;
-    
+    padding: 0 25px; 
 }
 
-.signup-button, .signin-button {
-    width: 9px;
-    height: 5px;
+h4.signup-button, h4.signin-button {
+    width: 90px;
+    height: 25px;
     border-radius: 36px;
     background-color: red;
     color: white;
     cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    padding: 2px;
 }
 
-.grey {
+h4.grey {
     background-color: grey;
     border: #ffffff;
 }
@@ -71,14 +79,38 @@ div.submit-buttons {
     padding: 0;
 }
 
-div.summit-to-signup, div.submit-to-login {
-    color: #ffffff;
-    width: 15px;
-    height: 5px;
+div.submit-to-signup, div.submit-to-login {
+    width: 200px;
+    height: 14px;
     background-color: grey;
-    margin: 25px auto;
-    padding: 3px auto;
+    margin: 0px auto;
+    padding: 5px 5px;
     border-radius: 36px;
-    border: red;
+    border: 2px solid grey;
     cursor: pointer;
+    text-align: center;
+}
+
+div.submit-to-signup button {
+    color: white;
+    padding: 0px 0px;
+    background-color: grey;
+    text-align: center;
+    margin: 0px 10px;
+    margin-bottom: 2px;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+}
+
+div.submit-to-login button {
+    color: white;
+    padding: 0px 0px;
+    background-color: grey;
+    text-align: center;
+    margin: 0px 10px;
+    margin-bottom: 2px;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
 }

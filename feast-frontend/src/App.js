@@ -5,8 +5,6 @@ import Header from './Header';
 import Footer from './Footer';
 import Recipes from './Recipes';
 import About from './About';
-import SignUp from './SignUp';
-import SignIn from './SignIn';
 import SignupLogin from './SignupLogin';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -20,9 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/recipes" element={<Recipes />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/signin" element={<SignIn />} />
+            <Route path="/recipes" element={<Recipes />} />          
             <Route path="/signuplogin" element={<SignupLogin />} />
           </Routes>
         </div>

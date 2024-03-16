@@ -17,7 +17,7 @@ const SignupLogin = () => {
             e.preventDefault();
             const signupData = { firstname, lastname, email, password };
             console.log(signupData);
-            alert('sign up successful');
+            alert('sign up successful. click ok to continue');
             
             /*fetch('', {
             method: 'POST',
@@ -33,7 +33,7 @@ const SignupLogin = () => {
             e.preventDefault();
             const loginData = { email, password };
             console.log(loginData);
-            alert('login successful')
+            alert('login successful. click ok to continue');
 
             /*fetch('', {
             method: 'POST',
@@ -48,7 +48,7 @@ const SignupLogin = () => {
 
     return ( 
         <div className="container">
-            <form>
+            <form onSubmit={ submitHandler }>
             <div className="header">{ action }</div>
             <div className="inputs-container">
                 { action==="Login"?<></>:<div className="input">
@@ -89,22 +89,22 @@ const SignupLogin = () => {
                 </div>
             </div>
             { action==="Sign Up"?<></>:<div className="forget-password">
-                Forgot Password<span>Click Here</span>
+                Forgot Password?<span> Click Here</span>
             </div> }
             <div className="signup-signin-buttons">
                 <div className="signup">
-                    <button className={action==="Login"?"signup-button grey":"signup-button"} onClick={() => setAction('Sign Up')}>Sign Up</button>
+                    <h4 className={action==="Login"?"signup-button grey":"signup-button"} onClick={() => setAction('Sign Up')}>Sign Up</h4>
                 </div>
                 <div className="login">
-                    <button className={action==="Sign Up"?"signup-button grey":"signin-button"} onClick={() => setAction('Login')}>Login</button>
+                    <h4 className={action==="Sign Up"?"signup-button grey":"signin-button"} onClick={() => setAction('Login')}>Login</h4>
                 </div>
             </div>
             <div className="submit-buttons">
-                { action==="Login"?<></>:<div className="summit-to-signup">
-                    <button onClick={ submitHandler }>submit to signup</button> 
+                { action==="Login"?<></>:<div className="submit-to-signup">
+                    <button>submit to signup</button> 
                 </div> }
                 { action==="Sign Up"?<></>:<div className="submit-to-login">
-                    <button onClick={ submitHandler }>submit to login</button>    
+                    <button>submit to login</button>    
                 </div> }                
             </div>
             </form>

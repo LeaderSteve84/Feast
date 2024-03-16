@@ -3,82 +3,57 @@
   top: 0;
   left: 0;
   background-color: #808080;
-  padding: 0;
   display: flex;
   align-items: center;
+  gap: 10px;
   max-width: 100%;
   width: 100%;
   margin: 0;
-
-}
-
-.footer-nav-bar {
-  background-color: #808080;
-  display: flex;
-  align-items: center;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.footer-mantra {
-  font-style: italic;
-  font-size: 15px;
-  text-align: right;
-  color: #000000;
-  margin-left: 800px;
 }
 
 .nav-header {
-  color: whitesmoke;
-  font-size: 25px;
-  text-align: left;
-  padding: 0;
-  margin: 7px 0 7px 20px;
-}
-
-.home-link, .about-link, .footer-recipes-link {
-  text-align: left;
-  margin-left: 20px;
-  text-decoration: none;
-  padding: 1px 6px;
-  font-size: 15px;
-  color: #d32f2f;
-  font-style: bold;
-  border: 2px solid #ffffff;
-  border-radius: 100px;
-  background-color: #ffffff;
-}
-
-.recipes-link {
-  text-align: end;
-  margin-left: 720px;
-  text-decoration: none;
-  padding: 1px 6px;
-  font-size: 15px;
-  color: #d32f2f;
-  font-style: bold;
-  border: 2x solid #d32f2f;
-  border-radius: 100px;
-  background-color:white;
-} 
-
-.signIn-link, .signUp-link {
-  text-align: end;
-  margin-left: 20px;
-  text-decoration: none;
-  padding: 1px 6px;
-  border: 2px solid #d32f2f;
-  border-radius: 100px;
-  font-size: 15px;
   color: #ffffff;
-  font-style: bold;
+  margin: 0;
+  margin-left: 12px;
+  padding: 0;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 260px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 25px;
+}
+
+
+.home-link, .about-link, .recipes-link {
+  text-decoration: 0;
+  border: 2px solid grey;
+  color: #d32f2f;
+  background-color: #e0e0e0;
+  width: 70px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.signuplogin-link {
+  text-decoration: 0;
+  border: 2px solid grey;
+  color: #e0e0e0;
   background-color: #d32f2f;
+  width: 120px;
+  text-align: center;
+  border-radius: 15px; 
 }
 
 .home {
   text-align: center;
-
 }
+
 .foodImages {
   border: 8px solid #4caf50;
   display:inline-block;
@@ -167,26 +142,31 @@
 .about {
   background-color: #ffffff;
   max-width: 100%;
-  width: 600px;
+  width: 500px;
   margin: 30px auto;
   padding: 20px 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .paragraph-heading {
-  font-size: 18px;
+  background-color:#4caf50;
+  font-size: 16px;
   margin-bottom: none;
   display: inline;
   color: #d32f2f;
   text-align: left;
-  padding-bottom: 0;
+  padding: 3px 12px;
+  border-radius: 36px;
+  font-weight: bold;
 }
 
 .paragraph {
   margin-top: none;
   text-align: left;
-  letter-spacing: 1px;
-  line-height: 20px;
+  letter-spacing: 0.5px;
+  line-height: 1.3em;
+  font-size: 14px;
+  font-family: Arial;
 }
 
 .signup-form {
