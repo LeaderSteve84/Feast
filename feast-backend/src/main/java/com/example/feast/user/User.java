@@ -21,13 +21,13 @@ import java.util.List;
 @Entity(name = "users")
 public class User extends Base implements UserDetails {
 
+    private String nickName;
     private String firstName;
     private String lastName;
     private String email;
     private String password;
-    private Integer age;
     private String profilePhoto;
-//    private Boolean isEnabled = false;
+    private Boolean isEnabled = false;
 
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -64,6 +64,6 @@ public class User extends Base implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return isEnabled;
     }
 }

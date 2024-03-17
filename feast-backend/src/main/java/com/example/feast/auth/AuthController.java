@@ -1,12 +1,11 @@
 package com.example.feast.auth;
 
 
+import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.access.method.P;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/v1/auth")
@@ -18,7 +17,7 @@ public class AuthController {
     @PostMapping("/signup")
     public ResponseEntity<AuthResponse> register(
             @RequestBody RegistrationRequest request
-    ) {
+    ) throws MessagingException {
         return ResponseEntity.ok(authService.register(request));
     }
 
@@ -27,5 +26,11 @@ public class AuthController {
             @RequestBody AuthRequest request
     ) {
         return ResponseEntity.ok(authService.login(request));
+    }
+
+    @PostMapping("/confirm/{token}")
+    public ResponseEntity<AuthResponse> confirmEmail(
+            @PathVariable String token) {
+        return ResponseEntity.ok(authService.confirmEmail(token));
     }
 }

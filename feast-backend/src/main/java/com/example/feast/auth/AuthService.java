@@ -1,9 +1,11 @@
 package com.example.feast.auth;
 
 import com.example.feast.config.JwtService;
+import com.example.feast.emailsender.EmailService;
 import com.example.feast.user.Role;
 import com.example.feast.user.User;
 import com.example.feast.user.UserRepository;
+import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -22,7 +24,11 @@ public class AuthService {
     private final JwtService jwtService;
 
     private final AuthenticationManager authenticationManager;
-    public AuthResponse register(RegistrationRequest request) {
+
+    private final EmailService emailService;
+
+
+    public AuthResponse register(RegistrationRequest request) throws MessagingException {
         var user = User.builder()
                 .firstName(request.getFirstName())
                 .lastName(request.getLastName())
@@ -34,6 +40,7 @@ public class AuthService {
 
         var jwtToken = jwtService.generateToken(user);
         System.out.println("jwtToken is " + jwtToken);
+        emailService.sendEmail(request.getEmailAddress(), jwtToken);
         return AuthResponse.builder()
                 .token(jwtToken)
                 .build();
@@ -52,8 +59,28 @@ public class AuthService {
                         () -> new UsernameNotFoundException("User not found")
                 );
         var jwtToken = jwtService.generateToken(user);
+        System.out.println(jwtToken);
         return AuthResponse.builder()
                 .token(jwtToken)
+                .message("Account creation successful. Check your email for OTP verification.")
                 .build();
     }
+
+    public AuthResponse confirmEmail(String token) {
+        var email = jwtService.extractUsername(token);
+        var user = userRepository.findByEmail(email);
+        if (user.isPresent()) {
+            var confirmedUser = user.get();
+           confirmedUser.setIsEnabled(true);
+           userRepository.save(confirmedUser);
+            return AuthResponse.builder()
+                    .message("Email confirmed!")
+                    .build();
+        } else {
+            return AuthResponse.builder()
+                    .message("Email address already verified!")
+                    .build();
+        }
+
+    };
 }
