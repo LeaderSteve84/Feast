@@ -1,7 +1,7 @@
 spring:
   mail:
     protocol: smtp
-    username: ${feast.email}
+    username: ${feast.emailAddress}
     password: ${feast.password}
   datasource:
     url: jdbc:postgresql://localhost:5432/feast
@@ -10,7 +10,7 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
@@ -20,5 +20,6 @@ spring:
 
 feast.base.url: https://feast.com
 edamam.base.url: https://api.edamam.com/
-edamam.api.id: 7b6bc7d2
-edamam.api.app_keys: 86969d07c7c1ae899323ad85b6eca8ef
+edamam.api.id: ${edamam.api.id}
+edamam.api.app_keys: ${edamam.api.app_keys}
+secret.key: ${secret.key}

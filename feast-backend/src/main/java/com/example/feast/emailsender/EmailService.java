@@ -6,6 +6,7 @@ import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.SimpleMailMessage;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.net.ConnectException;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class EmailService {
@@ -26,9 +28,11 @@ public class EmailService {
     private final JavaMailSender javaMailSender;
 
     public void sendEmail(String to, String token) throws MessagingException {
+        log.info("Mail setup");
+        log.info(to);
 
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
-        mimeMessage.setFrom(new InternetAddress("welcome@feast.com"));
+        mimeMessage.setFrom(new InternetAddress("feast.food.love@gmail.com"));
         mimeMessage.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(to));
         mimeMessage.setSubject("Email Confirmation from Feast");
 

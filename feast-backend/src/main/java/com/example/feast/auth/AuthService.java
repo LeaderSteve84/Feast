@@ -7,12 +7,14 @@ import com.example.feast.user.User;
 import com.example.feast.user.UserRepository;
 import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class AuthService {
@@ -29,20 +31,20 @@ public class AuthService {
 
 
     public AuthResponse register(RegistrationRequest request) throws MessagingException {
-        var user = User.builder()
+        User user = User.builder()
                 .firstName(request.getFirstName())
                 .lastName(request.getLastName())
-                .email(request.getEmailAddress())
+                .emailAddress(request.getEmailAddress())
                 .password(passwordEncoder.encode(request.getPassword()))
+                .isEnabled(false)
                 .role(Role.USER)
                 .build();
         userRepository.save(user);
 
         var jwtToken = jwtService.generateToken(user);
-        System.out.println("jwtToken is " + jwtToken);
+        log.info(jwtToken);
         emailService.sendEmail(request.getEmailAddress(), jwtToken);
         return AuthResponse.builder()
-                .token(jwtToken)
                 .build();
     }
 
@@ -53,34 +55,46 @@ public class AuthService {
                         request.getPassword()
                 )
         );
-        var user = userRepository.findByEmail(
+        var user = userRepository.findByEmailAddress(
                 request.getEmailAddress())
                 .orElseThrow(
                         () -> new UsernameNotFoundException("User not found")
                 );
         var jwtToken = jwtService.generateToken(user);
-        System.out.println(jwtToken);
+        log.info(jwtToken);
         return AuthResponse.builder()
-                .token(jwtToken)
-                .message("Account creation successful. Check your email for OTP verification.")
+                .message("Logged in successfully")
                 .build();
     }
 
     public AuthResponse confirmEmail(String token) {
-        var email = jwtService.extractUsername(token);
-        var user = userRepository.findByEmail(email);
-        if (user.isPresent()) {
-            var confirmedUser = user.get();
-           confirmedUser.setIsEnabled(true);
-           userRepository.save(confirmedUser);
+        String email = jwtService.extractUsername(token);
+        var user = userRepository.findByEmailAddress(email);
+        if (email != null) {
+            if (user.isPresent()) {
+                var signedUpUser = user.get();
+                if (signedUpUser.isEnabled()) {
+                    return AuthResponse.builder()
+                            .message("Email address already verified!")
+                            .build();
+                } else {
+                    signedUpUser.setIsEnabled(true);
+                    userRepository.save(signedUpUser);
+                    return AuthResponse.builder()
+                            .message("Email confirmed!")
+                            .build();
+
+                }
+
+            } else {
+                return AuthResponse.builder()
+                        .message("User not found")
+                        .build();
+            }
+        }else {
             return AuthResponse.builder()
-                    .message("Email confirmed!")
-                    .build();
-        } else {
-            return AuthResponse.builder()
-                    .message("Email address already verified!")
+                    .message("Link not properly formatted")
                     .build();
         }
-
     };
 }

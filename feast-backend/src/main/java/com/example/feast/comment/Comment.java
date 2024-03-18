@@ -1,6 +1,6 @@
 package com.example.feast.comment;
 
-import com.example.feast.Like;
+import com.example.feast.like.Like;
 import com.example.feast.base.Base;
 import com.example.feast.recipe.Recipe;
 import com.example.feast.user.User;
@@ -16,8 +16,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-@RequiredArgsConstructor
-@Entity
+@Entity(name = "comment")
 public class Comment extends Base {
     @Column(name = "content", columnDefinition = "TEXT")
     private String content;

@@ -28,9 +28,9 @@ public class AuthController {
         return ResponseEntity.ok(authService.login(request));
     }
 
-    @PostMapping("/confirm/{token}")
+    @PostMapping("/confirm")
     public ResponseEntity<AuthResponse> confirmEmail(
-            @PathVariable String token) {
+            @RequestParam String token) {
         return ResponseEntity.ok(authService.confirmEmail(token));
     }
 }

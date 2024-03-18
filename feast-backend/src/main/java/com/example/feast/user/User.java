@@ -1,10 +1,8 @@
 package com.example.feast.user;
 
 import com.example.feast.base.Base;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Table;
+import com.example.feast.comment.Comment;
+import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -24,10 +22,12 @@ public class User extends Base implements UserDetails {
     private String nickName;
     private String firstName;
     private String lastName;
-    private String email;
+    private String emailAddress;
     private String password;
     private String profilePhoto;
-    private Boolean isEnabled = false;
+    @OneToMany(mappedBy = "user")
+    private List<Comment> comments;
+    private Boolean isEnabled;
 
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -44,7 +44,7 @@ public class User extends Base implements UserDetails {
 
     @Override
     public String getUsername() {
-        return null;
+        return emailAddress;
     }
 
     @Override

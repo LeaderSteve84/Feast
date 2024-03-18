@@ -1,4 +1,4 @@
-package com.example.feast;
+package com.example.feast.like;
 
 import com.example.feast.base.Base;
 import com.example.feast.comment.Comment;
@@ -8,20 +8,18 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.ForeignKey;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
-@RequiredArgsConstructor
-@Entity
+@Entity(name = "likes")
 public class Like extends Base {
     @ManyToOne
     @JoinColumn(
             name = "user_id",
             referencedColumnName = "id",
-            foreignKey = @ForeignKey(name = "like_user_fkey")
+            foreignKey = @ForeignKey(name = "like_user_foreign_key")
     )
     private User user;
 
@@ -40,4 +38,5 @@ public class Like extends Base {
             foreignKey = @ForeignKey(name = "like_comment_foreign_key")
     )
     private Comment comment;
+
 }
