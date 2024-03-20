@@ -6,9 +6,9 @@ const SignupLogin = () => {
 
     const [ action, setAction ] = useState('Sign Up');
     const [ firstname, setFirstname ] = useState('');
-    const [lastname, setLastname] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [ lastname, setLastname ] = useState('');
+    const [ email, setEmail ] = useState('');
+    const [ password, setPassword ] = useState('');
     // const [isPending, setIsPending] = useState(false);
     //  const redirect = useHistory();
 
@@ -19,10 +19,10 @@ const SignupLogin = () => {
             console.log(signupData);
             alert('sign up successful. click ok to continue');
             
-            /*fetch('', {
+            /*fetch('api/v1/auth/signup', {
             method: 'POST',
             headers: { "Content-Type": "application/json"},
-            body: JSON.stringify(signinData);
+            body: JSON.stringify(signupData);
             )}.then(() => {
             console.log('Signed Up');
             setIsPending(false);
@@ -35,13 +35,13 @@ const SignupLogin = () => {
             console.log(loginData);
             alert('login successful. click ok to continue');
 
-            /*fetch('', {
+            /*fetch('api/v1/auth/login', {
             method: 'POST',
             headers: { "Content-Type": "application/json"},
-            body: JSON.stringify(signinData);
+            body: JSON.stringify(loginData);
             )}.then(() => {
             console.log('Signed In');
-            redirect("/");
+            redirect.push("/recipes");
             })*/
         }
     }
@@ -101,10 +101,10 @@ const SignupLogin = () => {
             </div>
             <div className="submit-buttons">
                 { action==="Login"?<></>:<div className="submit-to-signup">
-                    <button>submit to signup</button> 
+                    <button type="submit">submit to signup</button> 
                 </div> }
                 { action==="Sign Up"?<></>:<div className="submit-to-login">
-                    <button>submit to login</button>    
+                    <button type="submit`">submit to login</button>    
                 </div> }                
             </div>
             </form>
