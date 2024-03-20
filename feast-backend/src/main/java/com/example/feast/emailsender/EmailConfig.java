@@ -10,10 +10,10 @@ import java.util.Properties;
 
 @Configuration
 public class EmailConfig {
-    @Value("{feast.emailAddress}")
+    @Value("{feast_emailAddress}")
     private String emailAddress;
 
-    @Value("feast.password")
+    @Value("feast_password")
     private String password;
 
     @Bean

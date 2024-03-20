@@ -1,8 +1,8 @@
 spring:
   mail:
     protocol: smtp
-    username: ${feast.emailAddress}
-    password: ${feast.password}
+    username: ${feast_emailAddress}
+    password: ${feast_password}
   datasource:
     url: jdbc:postgresql://localhost:5432/feast
     username: postgres
@@ -18,8 +18,8 @@ spring:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
-feast.base.url: https://feast.com
-edamam.base.url: https://api.edamam.com/
-edamam.api.id: ${edamam.api.id}
-edamam.api.app_keys: ${edamam.api.app_keys}
-secret.key: ${secret.key}
+feast_base_url: https://feast.com
+edamam_base_url: https://api.edamam.com/api/recipes/v2
+edamam_api_id: ${edamam_api_id}
+edamam_api_app_keys: ${edamam_api_app_keys}
+secret_key: ${secret_key}

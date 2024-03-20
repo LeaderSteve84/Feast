@@ -19,9 +19,10 @@ import java.util.function.Function;
 @Slf4j
 @Service
 public class JwtService {
-
-    @Value("{secret.key}")
+    @Value("${secret_key}")
     private String SECRET_KEY;
+//    private static final String SECRET_KEY = "e90982ae4fa1dfb15e4734dc69080ae2f43f6373efa947b4bf935504b6c2953f";
+//private static final String SECRET_KEY = "abe787c21bec631005993dc02bed4cb7664af7e376c229bbaf044535796c48df";
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }

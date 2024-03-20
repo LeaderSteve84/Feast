@@ -12,6 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity(name = "recipe")
 public class Recipe extends Base {
     private String image;

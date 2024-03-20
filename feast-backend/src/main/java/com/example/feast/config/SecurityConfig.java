@@ -47,30 +47,31 @@ public class SecurityConfig {
                 return http.build();
     }
 
-    @Bean
-    CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of(
-                "http://localhost:3000"
-        ));
-        configuration.setAllowedMethods(Arrays.asList(
-                HttpMethod.GET.name(),
-                HttpMethod.POST.name(),
-                HttpMethod.PATCH.name(),
-                HttpMethod.DELETE.name()
-        ));
-        configuration.setAllowCredentials(true);
-        configuration.setAllowedHeaders(List.of(
-                "X-CSRF-TOKEN",
-                HttpHeaders.AUTHORIZATION,
-                HttpHeaders.ACCEPT,
-                HttpHeaders.CONTENT_TYPE
-        ));
-        configuration.setAllowedOriginPatterns(List.of(
-                "/**"
-        ));
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", configuration);
-        return source;
-    }
+//    @Bean
+//    CorsConfigurationSource corsConfigurationSource() {
+//        CorsConfiguration configuration = new CorsConfiguration();
+//        configuration.setAllowedOrigins(List.of(
+//                "http://localhost:3000",
+//                "https://api.edamam.com"
+//        ));
+//        configuration.setAllowedMethods(Arrays.asList(
+//                HttpMethod.GET.name(),
+//                HttpMethod.POST.name(),
+//                HttpMethod.PATCH.name(),
+//                HttpMethod.DELETE.name()
+//        ));
+//        configuration.setAllowCredentials(true);
+//        configuration.setAllowedHeaders(List.of(
+//                "X-CSRF-TOKEN",
+//                HttpHeaders.AUTHORIZATION,
+//                HttpHeaders.ACCEPT,
+//                HttpHeaders.CONTENT_TYPE
+//        ));
+//        configuration.setAllowedOriginPatterns(List.of(
+//                "/**"
+//        ));
+//        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+//        source.registerCorsConfiguration("/**", configuration);
+//        return source;
+//    }
 }

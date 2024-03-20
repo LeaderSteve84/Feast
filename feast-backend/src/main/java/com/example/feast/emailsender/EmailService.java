@@ -21,7 +21,7 @@ import java.net.ConnectException;
 @Service
 @RequiredArgsConstructor
 public class EmailService {
-    @Value("${feast.base.url}")
+    @Value("${feast_base_url}")
     private String baseUrl;
 
 
@@ -32,7 +32,7 @@ public class EmailService {
         log.info(to);
 
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
-        mimeMessage.setFrom(new InternetAddress("feast.food.love@gmail.com"));
+//        mimeMessage.setFrom(new InternetAddress("feast.food.love@gmail.com"));
         mimeMessage.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(to));
         mimeMessage.setSubject("Email Confirmation from Feast");
 
