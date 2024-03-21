@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
 
-public class Root {
+public class Root{
     public int from;
     @JsonProperty("to")
     public int myto;

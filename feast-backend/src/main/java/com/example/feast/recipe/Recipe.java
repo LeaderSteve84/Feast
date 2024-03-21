@@ -17,12 +17,13 @@ import java.util.List;
 public class Recipe extends Base {
     private String image;
     private String label;
+    private String recipeId;
 
     @ElementCollection
-    private ArrayList<String> ingredientLines;
+    private List<String> ingredientLines;
 
     @ElementCollection
-    private ArrayList<String> instructions;
+    private List<String> instructions;
 
     @OneToMany(mappedBy = "recipe", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comment;

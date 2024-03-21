@@ -1,5 +1,7 @@
 package com.example.feast.external.model;
 
+import java.util.ArrayList;
+
 public class Digest{
         public String label;
         public String tag;
@@ -8,5 +10,5 @@ public class Digest{
         public boolean hasRDI;
         public int daily;
         public String unit;
-        public String sub;
+        public ArrayList<Sub> sub;
     }

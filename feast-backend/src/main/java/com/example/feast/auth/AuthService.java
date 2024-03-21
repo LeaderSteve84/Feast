@@ -5,6 +5,7 @@ import com.example.feast.emailsender.EmailService;
 import com.example.feast.user.Role;
 import com.example.feast.user.User;
 import com.example.feast.user.UserRepository;
+import com.example.feast.user.UserUtil;
 import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -63,6 +64,8 @@ public class AuthService {
         var jwtToken = jwtService.generateToken(user);
         log.info(jwtToken);
         return AuthResponse.builder()
+                .token(jwtToken)
+                .emailAddress(user.getEmailAddress())
                 .message("Logged in successfully")
                 .build();
     }
