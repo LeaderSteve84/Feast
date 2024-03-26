@@ -43,6 +43,15 @@
    font-size: 15px;
 }
 
-.recipe-info ul li span {
- font-weight: bold;
+.recipe-info ul li > span {
+   font-weight: bold;
+   color: white;
+   border: 1px solid #ffffff;
+   border-radius: 15px;
+   background-color: green;
+   padding: 2px 8px;
+}
+
+.bullet {
+   color: green;
 }
