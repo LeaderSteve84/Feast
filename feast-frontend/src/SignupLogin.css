@@ -1,0 +1,116 @@
+div.container {
+    width: 400px;
+    height: 600px;
+    margin: 20px auto;
+    padding: 25px 35px;
+    background-color: #ffffff;
+}
+
+div.header {
+    text-align: center;
+    font-size: 30px;
+    color: red;
+    margin: 15px auto;
+    padding: 0%;
+}
+
+div.inputs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    background-color: gray;
+    padding: 25px 25px;
+}
+
+div.input {
+    font-size: 15px;
+    outline: 0;
+    border: 0;
+    margin: 0 auto;
+    padding: 0%;
+}
+
+div.forget-password {
+    margin-top: 25px;
+}
+div.forget-password span {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+div.forget-password span:hover {
+    color: red;
+}
+
+div.signup-signin-buttons {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 25px auto;
+    padding: 0 25px; 
+}
+
+h4.signup-button, h4.signin-button {
+    width: 90px;
+    height: 25px;
+    border-radius: 36px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    padding: 2px;
+}
+
+h4.grey {
+    background-color: grey;
+    border: #ffffff;
+}
+
+div.submit-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin: 25px auto;
+    padding: 0;
+}
+
+div.submit-to-signup, div.submit-to-login {
+    width: 200px;
+    height: 14px;
+    background-color: grey;
+    margin: 0px auto;
+    padding: 5px 5px;
+    border-radius: 36px;
+    border: 2px solid grey;
+    cursor: pointer;
+    text-align: center;
+}
+
+div.submit-to-signup button {
+    color: white;
+    padding: 0px 0px;
+    background-color: grey;
+    text-align: center;
+    margin: 0px 10px;
+    margin-bottom: 2px;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+}
+
+div.submit-to-login button {
+    color: white;
+    padding: 0px 0px;
+    background-color: grey;
+    text-align: center;
+    margin: 0px 10px;
+    margin-bottom: 2px;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+}

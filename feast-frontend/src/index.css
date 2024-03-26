@@ -1,0 +1,250 @@
+.nav-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #808080;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.nav-header {
+  color: #ffffff;
+  margin: 0;
+  margin-left: 12px;
+  padding: 0;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 260px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 25px;
+}
+
+
+.home-link, .about-link, .recipes-link {
+  text-decoration: 0;
+  border: 2px solid grey;
+  color: #d32f2f;
+  background-color: #e0e0e0;
+  width: 70px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.signuplogin-link {
+  text-decoration: 0;
+  border: 2px solid grey;
+  color: #e0e0e0;
+  background-color: #d32f2f;
+  width: 120px;
+  text-align: center;
+  border-radius: 15px; 
+}
+
+.home {
+  text-align: center;
+}
+
+.foodImages {
+  border: 8px solid #4caf50;
+  display:inline-block;
+}
+
+.feast-header {
+  position: relative;
+  text-align: center;
+  top: 0;
+  max-width: 100%;
+  width: 100%;
+  left: 0;
+  background-color: #e0e0e0;
+  margin: 0 auto;
+  padding: 1px;
+}
+
+.feast {
+  color: #d32f2f;
+  text-shadow: 2px 2px;
+  margin-bottom: 0%;
+  margin-top: 2px;
+  padding-top: 4px;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.mantra {
+  font-style: italic;
+  font-size: 15px;
+  color: #000000;
+  margin-top: 0%;
+  padding: 0 6px 6px 6px;
+  margin-bottom: 0;
+}
+
+.about-feast {
+  font-size: 25px;
+  color:#d32f2f;
+  font-weight: bolder;
+  text-align: left;
+}
+
+.food-lovers {
+  font-style: italic;
+  color: #795548;
+  font-weight: bold;
+}
+
+.click-here {
+  font-weight: bold;
+  color:#795548;
+  text-decoration: none;
+  background-color: #ffffff;
+  padding: 3px 8px;
+  border: 2px solid #4caf50;
+  border-radius: 100px;
+}
+
+.more-contents {
+  font-size: 20px;
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.recipeslink {
+  font-weight: bold;
+  color: #795548;
+  text-decoration: none;
+  border: 2px solid #4caf50;
+  border-radius: 100px;
+  padding: 3px 8px;
+}
+
+.rd {
+  color: #795548;
+}
+
+.random-display {
+  border: 2px solid #d32f2f;
+  border-radius: 50px;
+  color:#795548;
+  margin: 10px auto;
+}
+
+.about {
+  background-color: #ffffff;
+  max-width: 100%;
+  width: 500px;
+  margin: 30px auto;
+  padding: 20px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.paragraph-heading {
+  background-color:#4caf50;
+  font-size: 16px;
+  margin-bottom: none;
+  display: inline;
+  color: #d32f2f;
+  text-align: left;
+  padding: 3px 12px;
+  border-radius: 36px;
+  font-weight: bold;
+}
+
+.paragraph {
+  margin-top: none;
+  text-align: left;
+  letter-spacing: 0.5px;
+  line-height: 1.3em;
+  font-size: 14px;
+  font-family: Arial;
+}
+
+.signup-form {
+  width: 300px;
+  height: 500px;
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 10px auto;
+} 
+
+div.firstname, div.lastname, div.email, div.password {
+  display: block;
+  margin: 15px auto;
+  padding: 5px;
+  text-align: center;
+}
+
+.submit-signup {
+  margin: 2px auto;
+  display: block;
+  text-align: center;
+  padding: 2px 10px;
+}
+
+div.signup-buttons p{
+  text-align: center;
+  margin: 2px, auto;
+  padding: 5px;
+}
+
+div.signup-buttons button.signup-signin-button {
+  display: block;
+  text-align: center;
+  margin: 2px auto;
+  padding: 2px 10px;
+}
+
+div.signup-buttons button.signup-signin-button a {
+  text-decoration: 0;
+}
+
+.signup-heading {
+  text-align: center;
+}
+
+div.input-email, div.input-password {
+  text-align: center;
+}
+
+div.signin form.signinform {
+  width: 300px;
+  height: 500px;
+  margin: 10px auto;
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.signin-heading {
+  text-align: center;
+}
+
+input#signin-password, input#signin-email {
+  margin: 12px auto;
+  padding: 2px;
+}
+
+button.submit-signin, button.signin-signup-button {
+  display: block;
+  text-align: center;
+  margin: 5px auto;
+  padding: 2px 10px;
+}
+
+div.signin-buttons p {
+  text-align: center;
+  margin: 5px auto;
+  padding: 5px;
+}
+button.signin-signup-button a{
+  text-decoration: 0;
+}
