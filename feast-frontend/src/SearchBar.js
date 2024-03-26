@@ -17,7 +17,7 @@ const SearchBar = ({ searchInput, setSearchInput }) => {
                         id="search-input"
                         name="search"
                         required
-                        placeholder="Type to search..."
+                        placeholder="Search for recipes..."
                         value={ searchInput }
                         onChange={(e) => setSearchInput(e.target.value)}
                         />
