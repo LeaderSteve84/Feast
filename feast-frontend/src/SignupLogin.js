@@ -1,6 +1,6 @@
 import './SignupLogin.css';
 import { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const SignupLogin = () => {
 
@@ -9,40 +9,36 @@ const SignupLogin = () => {
     const [ lastname, setLastname ] = useState('');
     const [ email, setEmail ] = useState('');
     const [ password, setPassword ] = useState('');
-    // const [isPending, setIsPending] = useState(false);
-    //  const redirect = useHistory();
+    //const [isPending, setIsPending] = useState(false);
+    
+    let navigate = useNavigate();
 
     const submitHandler = (e) => {
         if (action==="Sign Up") {
             e.preventDefault();
             const signupData = { firstname, lastname, email, password };
-            console.log(signupData);
-            alert('sign up successful. click ok to continue');
             
-            /*fetch('api/v1/auth/signup', {
+            fetch('api/v1/auth/signup', {
             method: 'POST',
             headers: { "Content-Type": "application/json"},
-            body: JSON.stringify(signupData);
-            )}.then(() => {
+            body: JSON.stringify(signupData)
+            }).then(() => {
             console.log('Signed Up');
-            setIsPending(false);
-            redirect.push("/signin");
-            })*/
+            navigate("/signin");
+            })
 
         } else {
             e.preventDefault();
             const loginData = { email, password };
-            console.log(loginData);
-            alert('login successful. click ok to continue');
 
-            /*fetch('api/v1/auth/login', {
+            fetch('api/v1/auth/login', {
             method: 'POST',
             headers: { "Content-Type": "application/json"},
-            body: JSON.stringify(loginData);
-            )}.then(() => {
+            body: JSON.stringify(loginData)
+            }).then(() => {
             console.log('Signed In');
-            redirect.push("/recipes");
-            })*/
+            navigate("/recipes");
+            })
         }
     }
 
