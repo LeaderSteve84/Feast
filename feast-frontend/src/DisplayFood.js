@@ -3,25 +3,25 @@ import { useState } from 'react';
 const DisplayFood = () => {
 
     const foodImageData = [
-        [<img src={ require('./foodimages/banana-pancake.jpg') } alt="recipe sample pix" height={400} width={400} />, 
+        [<img src={ require('./foodimages/banana-pancake.jpg') } alt="recipe sample pix" />, 
         "Eggless Banana Pancake"],
-        [<img src={ require('./foodimages/crispy.jpg') } alt="recipe sample pix" height={400} width={400} />, 
+        [<img src={ require('./foodimages/crispy.jpg') } alt="recipe sample pix" />, 
         "Crispy Calamari Rings"],
-        [<img src={ require('./foodimages/egusi-soup.jpeg') } alt="recipe sample pix" height={400} width={400} />, 
+        [<img src={ require('./foodimages/egusi-soup.jpeg') } alt="recipe sample pix" />, 
         "Egusi Soup"],
-        [<img src={ require('./foodimages/jollof-chicken.jpeg') } alt="recipe sample pix" height={400} width={400} />, 
+        [<img src={ require('./foodimages/jollof-chicken.jpeg') } alt="recipe sample pix" />, 
         "Jollof Rice with Chicken"],
-        [<img src={ require('./foodimages/jollof.jpeg') } alt="recipe sample pix" height={400} width={400} />, 
+        [<img src={ require('./foodimages/jollof.jpeg') } alt="recipe sample pix" />, 
         "Jollof Rice"],
-        [<img src={ require('./foodimages/makhani.jpg') } alt="recipe sample pix" height={400} width={400} />, 
+        [<img src={ require('./foodimages/makhani.jpg') } alt="recipe sample pix"  />, 
         "Vegan Dal Makhani"],
-        [<img src={ require('./foodimages/paratha.jpg') } alt="recipe sample pix" height={400} width={400} />, 
+        [<img src={ require('./foodimages/paratha.jpg') } alt="recipe sample pix" />, 
         "Moringa Paratha"],
-        [<img src={ require('./foodimages/roasted-turkey.jpg') } alt="recipe sample pix" height={400} width={400} />, 
+        [<img src={ require('./foodimages/roasted-turkey.jpg') } alt="recipe sample pix" />, 
         "Roasted Turkey"],
-        [<img src={ require('./foodimages/salad.jpg') } alt="recipe sample pix" height={400} width={400} />, 
+        [<img src={ require('./foodimages/salad.jpg') } alt="recipe sample pix" />, 
         "Strawberry Basil Feta Salad"],
-        [<img src={ require('./foodimages/tikka.jpg') } alt="recipe sample pix" height={400} width={400} />, 
+        [<img src={ require('./foodimages/tikka.jpg') } alt="recipe sample pix" />, 
         "Lemon Chicken Tikka"]
 
     ];

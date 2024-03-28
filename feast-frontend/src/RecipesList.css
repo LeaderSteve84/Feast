@@ -40,9 +40,18 @@
 
 .recipe-info ul li {
    margin-bottom: 5px;
-   font-size: 15px;
+   font-size: 17px;
 }
 
-.recipe-info ul li span {
- font-weight: bold;
+.recipe-info ul li > span {
+   font-weight: bold;
+   color: white;
+   border: 1px solid #ffffff;
+   border-radius: 15px;
+   background-color: green;
+   padding: 2px 8px;
+}
+
+.bullet {
+   color: green;
 }
