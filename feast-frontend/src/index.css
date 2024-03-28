@@ -6,27 +6,27 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  max-width: 100%;
   width: 100%;
   margin: 0;
+  flex-wrap: none;
 }
 
 .nav-header {
   color: #ffffff;
-  margin: 0;
-  margin-left: 12px;
-  padding: 0;
+  margin: 0 5px;
+  padding: 0 5px;
   text-align: center;
+  font-weight: bolder;
 }
 
 .links {
   display: flex;
   align-items: center;
-  justify-content: left;
-  gap: 260px;
+  justify-content: center;
+  gap: 20%;
   width: 100%;
   margin: 0 auto;
-  padding: 10px 25px;
+  padding: 10px 10px;
 }
 
 
@@ -38,6 +38,8 @@
   width: 70px;
   text-align: center;
   border-radius: 15px;
+  font-weight: bolder;
+  font-size: 17px;
 }
 
 .signuplogin-link {
@@ -48,15 +50,72 @@
   width: 120px;
   text-align: center;
   border-radius: 15px; 
+  font-weight: bolder;
+  font-size: 17px;
 }
 
 .home {
   text-align: center;
+  font-size: 18px;
 }
+
+.about-brief {
+  text-align: left;
+  padding: 10px;
+}
+
+.content-display-food{
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  gap: auto;
+  margin: 0;
+  padding: 10px;
+}
+
+.article-c p, .article-d p, .article-i p{
+  margin: 10px 10px;
+  margin-top: 10px;
+  text-align: left;
+  width: 90%;
+  height: auto;
+  padding: 5px;
+}
+
+.articles-flex {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  padding: 10px;
+  gap: auto;
+  margin: 0;
+}
+
+.article-e p, .article-f p, .article-g p, .article-h p{
+  margin: 10px 10px;
+  margin-top: 10px;
+  text-align: left;
+  width: 90%;
+  height: auto;
+  padding: 5px;
+}
+
+.article-c p::first-line, .article-d p::first-line, .article-i p::first-line, .article-e p::first-line, 
+.article-f p::first-line, .article-g p::first-line, .article-h p::first-line {
+ font-weight: bold;
+ font-size: 1.0em;
+ color: #d32f2f; 
+}
+
 
 .foodImages {
   border: 8px solid #4caf50;
   display:inline-block;
+}
+
+.foodImages img {
+  height: 400px;
+  width: 400px;
 }
 
 .feast-header {
@@ -83,7 +142,7 @@
 
 .mantra {
   font-style: italic;
-  font-size: 15px;
+  font-size: 16px;
   color: #000000;
   margin-top: 0%;
   padding: 0 6px 6px 6px;
@@ -108,9 +167,10 @@
   color:#795548;
   text-decoration: none;
   background-color: #ffffff;
-  padding: 3px 8px;
+  padding: 0.5px 7px;
   border: 2px solid #4caf50;
-  border-radius: 100px;
+  border-radius: 36px;
+  margin: 5px;
 }
 
 .more-contents {
