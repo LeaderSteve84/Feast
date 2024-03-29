@@ -16,7 +16,7 @@ const RecipesList = (props) => {
          <div className="recipe-info">
              <ul>
                 <li> <span>Label</span> { eachRecipe.recipe.label } </li>
-                <li> <span>Ingredient Lines</span> { eachRecipe.recipe.ingredientLines.map((line, index) => (
+                <li> <span>Ingredients </span> { eachRecipe.recipe.ingredientLines.map((line, index) => (
                         <div className="ingredient-lines" key={index}>
                           <span className="bullet"> - </span> { line }
                         </div>
