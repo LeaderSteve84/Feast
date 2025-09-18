@@ -1,15 +1,37 @@
+import { useState, useEffect } from 'react';
 import './RecipesList.css';
 
 const RecipesList = (props) => {
 
   const recipesData = props.recipesData;
-        
+  const [storedDatas, setStoredDatas] = useState([]);
+  
+  const handleStoreData = (url, label) => {
+        const newData = {[url]:label};
+        setStoredDatas(prevData => {
+                const updatedData = [...prevData, newData];
+                return updatedData;
+        });
+  };
+  console.log("store data:", storedDatas);
+
+  useEffect(() => {
+        recipesData.hits.forEach((eachRecipe) => {
+                handleStoreData(eachRecipe.recipe.images.REGULAR.url, eachRecipe.recipe.label);
+        });
+  }, [recipesData]);
+
+  const handleImageClick = () => {
+        console.log("Ninja Image Click");
+  }
+
+
   return (
      <div className="recipes-list">
      { recipesData.hits.map((eachRecipe, index) => (
          <div className="recipe-card" key={index}>
              { eachRecipe.recipe.images.SMALL ? (
-                     <img src={eachRecipe.recipe.images.REGULAR.url} height={300} width={300} alt={eachRecipe.recipe.label} />
+                     <img src={eachRecipe.recipe.images.REGULAR.url} height={300} width={300} alt={eachRecipe.recipe.label} onClick={ handleImageClick } />
                      ) : (
                      <p> No image available </p>
              )}
