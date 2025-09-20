@@ -1,18 +1,19 @@
 import { Link } from 'react-router-dom';
 
 const AboutBrief = () => {
-    return ( 
-        <div className="about-brief">
-            <p className="about-brief-head">
-                <span className="about-feast">
-                About Feast?</span> A social web application platform for <span className="food-lovers">food lovers.</span> 
-                Whether you possess extensive culinary experience or simply harbor an adventurous palate, Feast 
-                extends a warm invitation to individuals from all walks of life to become part of our expanding 
-                community of gastronomy enthusiasts. For more knowledge about Feast 
-                <Link to="/about" className="click-here">Click Here.</Link>
-            </p>
-        </div>
-     );
-}
+  return (
+    <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto transition-shadow duration-300 hover:shadow-lg">
+      <h2 className="text-2xl font-bold text-gray-800 mb-4">
+        About <span className="text-green-600">Feast</span>
+      </h2>
+      <p className="text-gray-700 text-base leading-relaxed">
+        Feast is a vibrant platform for food enthusiasts, welcoming everyone from seasoned chefs to adventurous home cooks. Join our growing community to explore diverse recipes, share culinary creations, and embrace sustainable cooking.{' '}
+        <Link to="/about" className="text-green-600 font-semibold hover:underline">
+          Learn More
+        </Link>
+      </p>
+    </div>
+  );
+};
 
 export default AboutBrief;

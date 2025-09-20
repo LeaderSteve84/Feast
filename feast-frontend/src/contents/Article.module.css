@@ -1,0 +1,52 @@
+/* src/contents/Article.module.css */
+.article {
+  /* Layout & Spacing */
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fffaf0 0%, #f5f5dc 100%); /* Subtle cream gradient for warmth */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border-left: 4px solid var(--primary-color, #d2691e); /* Accent border (goldenrod for food theme) */
+
+  /* Typography */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Clean, modern font stack */
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: left;
+
+  /* Interactions */
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+}
+
+.article:hover {
+  transform: translateY(-2px); /* Subtle lift on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.article p {
+  margin: 0;
+  font-weight: 400;
+}
+
+.article p:first-of-type {
+  font-style: italic; /* Optional: Italic for emphasis on first sentence */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .article {
+    margin: 1rem;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .article {
+    padding: 1rem;
+    border-left-width: 3px;
+  }
+}

@@ -1,30 +1,26 @@
 import './App.css';
-import Home from './Home';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
-import Header from './Header';
-import Footer from './Footer';
+import Home from './Home';
 import Recipes from './Recipes';
 import About from './About';
-import SignupLogin from './SignupLogin';
-import Comments from './Comments';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Features from './FeaturesPage';
+import Footer from './Footer';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Header />
+      <div className="flex flex-col min-h-screen">
         <Navbar />
-        <div className="Content">
+        <main className="flex-grow container mx-auto px-4 py-8">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/recipes" element={<Recipes />} />
-            <Route path="/comments" element={<Comments />} />
-            <Route path="/signuplogin" element={<SignupLogin />} />
+            <Route path="/features" element={<Features />} />
           </Routes>
-        </div>
-          <Footer />
+        </main>
+        <Footer />
       </div>
     </Router>
   );

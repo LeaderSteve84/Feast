@@ -1,58 +1,54 @@
+import React from 'react';
+
 const About = () => {
-    return ( 
-        <div className="about">
-            <h3 className="paragraph-heading">Introducing Feast: Your Culinary Companion</h3>
-            <p className="paragraph">
-                Are you a passionate food enthusiast looking for a platform that caters to your love for
-                culinary adventures? Look no further than Feast - your ultimate destination for discovering
-                delightful meals, exploring tantalizing recipes, and engaging with a vibrant community of
-                fellow food lovers.
-            </p>
-            <h3 className="paragraph-heading">Discover Delectable Delights</h3>
-            <p className="paragraph">
-                Feast offers a treasure trove of diverse and mouthwatering meals curated to satisfy every
-                palate. Whether you're craving a comforting bowl of homemade soup, a sizzling stir-fry, or an
-                indulgent dessert to satisfy your sweet tooth, Feast has you covered. With a vast array of
-                recipes from around the globe, you'll never run out of inspiration for your next culinary
-                creation.
-            </p>
-            <h3 className="paragraph-heading">Unlock Inspiring Recipes</h3>
-            <p className="paragraph">
-                Feast isn't just about browsing delicious dishes - it's about empowering you to unleash your
-                inner chef. Dive into our extensive collection of recipes, thoughtfully crafted to guide you
-                through every step of the cooking process. From beginner-friendly basics to gourmet delights,
-                our recipes cater to all skill levels and dietary preferences. With detailed instructions,
-                ingredient lists, and helpful tips, you'll be whipping up restaurant-worthy meals in no time.
-            </p>
-
-            <h3 className="paragraph-heading">Engage and Connect</h3>
-            <p className="paragraph">
-                At Feast, we believe that food is more than just sustenance - it's a catalyst for connection
-                and community. Join our vibrant community of food enthusiasts to share your culinary
-                triumphs, exchange recipe recommendations, and connect with like-minded individuals who
-                share your passion for good food. Whether you're seeking advice, sharing your latest kitchen
-                experiments, or simply swapping stories over a virtual meal, Feast is the place to be.   
-            </p>
-
-            <h3 className="paragraph-heading">Leave Your Mark with Comments</h3>
-            <p className="paragraph">
-                Have a favorite recipe that you can't get enough of? Or perhaps you've discovered a clever
-                twist on a classic dish that you're eager to share? With Feast's interactive commenting
-                feature, you can engage with recipes and meals like never before. Leave feedback, share tips,
-                or simply express your appreciation for a delicious creation - your voice matters, and your
-                comments help enrich the Feast experience for everyone. 
-            </p>
-
-            <h3 className="paragraph-heading">Join the Feast</h3>
-            <p className="paragraph">
-                Ready to embark on a culinary journey like no other? Whether you're a seasoned home chef or
-                a curious foodie eager to explore new flavors, Feast invites you to join our ever-growing
-                community of food lovers. Discover, create, and connect with us as we celebrate the art of
-                cooking and the joy of sharing delicious meals with the ones we love. Welcome to Feast - 
-                where every meal is a celebration of flavor, creativity, and community. Bon appétit!
-            </p>
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Main About Section */}
+        <div className="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-lg">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">About Feast</h2>
+          <p className="text-gray-700 text-base leading-relaxed">
+            Feast is your ultimate companion for culinary exploration, offering a rich collection of recipes tailored to your tastes and dietary needs. Our mission is to inspire home cooks and food enthusiasts to discover, create, and enjoy delicious meals while making informed choices about nutrition and sustainability.
+          </p>
         </div>
-     );
-}
- 
+
+        {/* Mission Section */}
+        <div className="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-lg">
+          <h3 className="text-xl font-semibold text-gray-800 mb-3">Our Mission</h3>
+          <p className="text-gray-700 text-base leading-relaxed">
+            At Feast, we empower you to explore global cuisines, from American classics to African delights, with detailed recipe information including health labels, calorie counts, and CO2 emissions data. We strive to make cooking accessible, enjoyable, and environmentally conscious.
+          </p>
+        </div>
+
+        {/* Features Section */}
+        <div className="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-lg">
+          <h3 className="text-xl font-semibold text-gray-800 mb-3">Why Choose Feast?</h3>
+          <ul className="space-y-2 text-gray-700 text-base">
+            <li className="flex items-start">
+              <span className="text-green-600 mr-2">•</span>
+              Comprehensive recipe details, including ingredients, cuisine types, and nutritional data.
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-600 mr-2">•</span>
+              Intuitive search to find recipes by meal type, cuisine, or dietary preferences.
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-600 mr-2">•</span>
+              Sustainability insights with CO2 emissions class for eco-conscious choices.
+            </li>
+          </ul>
+        </div>
+
+        {/* Call to Action */}
+        <div className="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-lg">
+          <h3 className="text-xl font-semibold text-gray-800 mb-3">Join the Feast Community</h3>
+          <p className="text-gray-700 text-base leading-relaxed">
+            Start your culinary journey today! Explore our recipes, save your favorites, and share your creations with a community of food lovers. Click the <span className="font-semibold text-green-600">"Recipes"</span> button to dive in.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default About;

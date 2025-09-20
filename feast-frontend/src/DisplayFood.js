@@ -1,62 +1,64 @@
-import { useState } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const DisplayFood = () => {
+  const foodImageData = [
+    { src: require('./foodimages/banana-pancake.jpg'), alt: 'Eggless Banana Pancake', name: 'Eggless Banana Pancake' },
+    { src: require('./foodimages/crispy.jpg'), alt: 'Crispy Calamari Rings', name: 'Crispy Calamari Rings' },
+    { src: require('./foodimages/egusi-soup.jpeg'), alt: 'Egusi Soup', name: 'Egusi Soup' },
+    { src: require('./foodimages/jollof-chicken.jpeg'), alt: 'Jollof Rice with Chicken', name: 'Jollof Rice with Chicken' },
+    { src: require('./foodimages/jollof.jpeg'), alt: 'Jollof Rice', name: 'Jollof Rice' },
+    { src: require('./foodimages/makhani.jpg'), alt: 'Vegan Dal Makhani', name: 'Vegan Dal Makhani' },
+    { src: require('./foodimages/paratha.jpg'), alt: 'Moringa Paratha', name: 'Moringa Paratha' },
+    { src: require('./foodimages/roasted-turkey.jpg'), alt: 'Roasted Turkey', name: 'Roasted Turkey' },
+    { src: require('./foodimages/salad.jpg'), alt: 'Strawberry Basil Feta Salad', name: 'Strawberry Basil Feta Salad' },
+    { src: require('./foodimages/tikka.jpg'), alt: 'Lemon Chicken Tikka', name: 'Lemon Chicken Tikka' },
+  ];
 
-    const foodImageData = [
-        [<img src={ require('./foodimages/banana-pancake.jpg') } alt="recipe sample pix" />, 
-        "Eggless Banana Pancake"],
-        [<img src={ require('./foodimages/crispy.jpg') } alt="recipe sample pix" />, 
-        "Crispy Calamari Rings"],
-        [<img src={ require('./foodimages/egusi-soup.jpeg') } alt="recipe sample pix" />, 
-        "Egusi Soup"],
-        [<img src={ require('./foodimages/jollof-chicken.jpeg') } alt="recipe sample pix" />, 
-        "Jollof Rice with Chicken"],
-        [<img src={ require('./foodimages/jollof.jpeg') } alt="recipe sample pix" />, 
-        "Jollof Rice"],
-        [<img src={ require('./foodimages/makhani.jpg') } alt="recipe sample pix"  />, 
-        "Vegan Dal Makhani"],
-        [<img src={ require('./foodimages/paratha.jpg') } alt="recipe sample pix" />, 
-        "Moringa Paratha"],
-        [<img src={ require('./foodimages/roasted-turkey.jpg') } alt="recipe sample pix" />, 
-        "Roasted Turkey"],
-        [<img src={ require('./foodimages/salad.jpg') } alt="recipe sample pix" />, 
-        "Strawberry Basil Feta Salad"],
-        [<img src={ require('./foodimages/tikka.jpg') } alt="recipe sample pix" />, 
-        "Lemon Chicken Tikka"]
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 640,
+        settings: { slidesToShow: 1 },
+      },
+    ],
+  };
 
-    ];
-
-    const[Idx, setIdx] = useState(0);
-    
-    const [ImageList, setImageList] = useState(foodImageData[Idx]);
-
-    const handledClick = () => {
-        if (Idx < (foodImageData.length - 1)) {
-            setIdx(Idx + 1);
-            setImageList(foodImageData[Idx]);
-        } else {
-            setIdx(0);
-            setImageList(foodImageData[Idx]);
-        }
-    }
-
-    return ( 
-        <div className="displayfoods">
-            <p className="pointer">
-               See sample of dish images of some recipes. 
-               <img src={ require('./foodimages/finger-pointer.jpg') } 
-               alt="see below" height={40} width={10} className="image-pointer"/> 
-               Click <span className="rd">Random Display</span> button below to change the images.</p>
-            <div className="foodImages">
-                { ImageList[0] }<br />
-                <span className="name">Name: { ImageList[1] } </span>
-                <br /><button onClick={ handledClick } className="random-display">Random Display</button>
+  return (
+    <div className="max-w-5xl mx-auto">
+      <Slider {...settings}>
+        {foodImageData.map((item, index) => (
+          <div key={index} className="px-2">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+              <img
+                src={item.src}
+                alt={item.alt}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <p className="text-gray-800 font-semibold text-center">{item.name}</p>
+              </div>
             </div>
-            <p className="name-recipes-comment">
-                <span className="homeComment">Comment:</span> <input type="text" className="input" />
-            </p>
-        </div>
-     );
-}
- 
+          </div>
+        ))}
+      </Slider>
+      <p className="text-center text-gray-600 mt-6">
+        Browse these mouthwatering dishes and more in our recipe collection!
+      </p>
+    </div>
+  );
+};
+
 export default DisplayFood;
