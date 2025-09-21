@@ -9,8 +9,8 @@ const Recipes = () => {
 
   const debouncedSearch = useDebounce(searchInput, 1000);
 
-  const ID = "7b6bc7d2";
-  const KEY = "86969d07c7c1ae899323ad85b6eca8ef";
+  const ID = process.env.REACT_APP_EDAMAM_ID;
+  const KEY = process.env.REACT_APP_EDAMAM_KEY;
   const URL = `https://api.edamam.com/api/recipes/v2/?q=${debouncedSearch}&app_id=${ID}&app_key=${KEY}&type=public`;
 
   const { recipesData, isPending, error } = useFetch(URL);
